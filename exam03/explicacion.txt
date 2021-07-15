@@ -1,0 +1,27 @@
+/*----------------------------------------------------------------
+*
+* Programación avanzada: Examen 03
+* Fecha creacion: Mayo 24, 2021
+* Fechas edicion:
+* Autor:
+			Martin Noboa - A01704052
+*
+*--------------------------------------------------------------*/
+
+
+ - ¿De qué problema de sincronización se trata?
+ 		Es un problema de sincronización de exclusión mutua.
+
+ - Descripción de estrategia de solución
+		Teniendo N cantidad de abejas y P cantidad de porciones, implementaria la siguiente solucion
+		Un contador, que si inicializa vacio para llevar la cuenta de las porciones.
+		Mientras el contador de miel no sea igual a la cantidad maxima del pote, pasan las abejas a depositar su porcion,
+		cuando se llene el arreglo, se detienen las abejas y el oso se levanta a comer. Una vez termine de comer,
+		vuelve a dormir, se vacia el contador de miel y vuelven a trabajar las abejas
+		Se crean N procesos de las abejas
+
+ - Descipcion de pruebas
+ 	Para que el programa corra correctamente:
+	gcc abejas.c -pthread
+	./a.out numeroAbejas numeroPorciones
+	Tanto el numeroAbejas como el numeroPorciones deben ser mayor a 1
